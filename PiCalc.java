@@ -12,7 +12,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class PiCalc {
 
-	private JFrame frmPicalcCalculatePi;
+	private JFrame frmPiCalc;
 	private static JLabel lblPi;
 	private JButton btnClear;
 	private Plot plot;
@@ -23,7 +23,7 @@ public class PiCalc {
 			public void run() {
 				try {
 					PiCalc window = new PiCalc();
-					window.frmPicalcCalculatePi.setVisible(true);
+					window.frmPiCalc.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -36,10 +36,10 @@ public class PiCalc {
 	}
 	
 	private void initialize() {
-		frmPicalcCalculatePi = new JFrame();
-		frmPicalcCalculatePi.setTitle("PiCalc: Calculate Pi using the Monte Carlo method");
-		frmPicalcCalculatePi.setBounds(100, 100, 597, 513);
-		frmPicalcCalculatePi.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmPiCalc = new JFrame();
+		frmPiCalc.setTitle("PiCalc: Calculate Pi using the Monte Carlo method");
+		frmPiCalc.setBounds(100, 100, 597, 513);
+		frmPiCalc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		plot = new Plot();
 		plot.setPreferredSize(new Dimension(500, 500));
@@ -70,7 +70,7 @@ public class PiCalc {
 				clearPlot();
 			}
 		});
-		GroupLayout groupLayout = new GroupLayout(frmPicalcCalculatePi.getContentPane());
+		GroupLayout groupLayout = new GroupLayout(frmPiCalc.getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
@@ -103,7 +103,7 @@ public class PiCalc {
 					.addComponent(lblPi)
 					.addContainerGap())
 		);
-		frmPicalcCalculatePi.getContentPane().setLayout(groupLayout);
+		frmPiCalc.getContentPane().setLayout(groupLayout);
 		
 		
 	}
