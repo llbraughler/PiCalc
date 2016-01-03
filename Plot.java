@@ -15,7 +15,7 @@ public class Plot extends JPanel {
 	private Rectangle2D rectangle;
 	private Ellipse2D circle;
 	private BufferedImage canvas;
-	private int R = 180;
+	private int R = 200;
 	private int D = 2 * R;
 
 	public Plot() {

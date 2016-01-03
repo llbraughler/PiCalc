@@ -37,6 +37,7 @@ public class PiCalc {
 	
 	private void initialize() {
 		frmPiCalc = new JFrame();
+		frmPiCalc.setResizable(false);
 		frmPiCalc.setTitle("PiCalc: Calculate Pi using the Monte Carlo method");
 		frmPiCalc.setBounds(100, 100, 597, 513);
 		frmPiCalc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -76,16 +77,16 @@ public class PiCalc {
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap()
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addGroup(groupLayout.createSequentialGroup()
-							.addComponent(plot, GroupLayout.PREFERRED_SIZE, 412, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+						.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+							.addComponent(plot, GroupLayout.DEFAULT_SIZE, 448, Short.MAX_VALUE)
+							.addGap(18)
 							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 								.addComponent(btnStart)
 								.addComponent(btnClear))
 							.addGap(49))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addComponent(lblPi)
-							.addContainerGap(562, Short.MAX_VALUE))))
+							.addContainerGap(542, Short.MAX_VALUE))))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
@@ -98,8 +99,8 @@ public class PiCalc {
 							.addComponent(btnClear))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(21)
-							.addComponent(plot, GroupLayout.PREFERRED_SIZE, 421, GroupLayout.PREFERRED_SIZE)))
-					.addPreferredGap(ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+							.addComponent(plot, GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)))
+					.addGap(18)
 					.addComponent(lblPi)
 					.addContainerGap())
 		);
